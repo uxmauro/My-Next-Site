@@ -41,7 +41,7 @@ type Props = {
     const project =  await getProject(slug);
 
 
-    return <div className=" ml-10 my-20">
+    return <div className=" xl:ml-10 my-20">
          <header className="flex  items-center">
           <Link href={'/'} className="w-10 h-10 text-4xl flex items-center justify-center mx-4 hover:drop-shadow-md">
            <BiArrowBack/>

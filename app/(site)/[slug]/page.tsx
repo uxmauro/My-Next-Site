@@ -15,7 +15,7 @@ export default async function Page({ params }: Props) {
     return (
         <section className=" py-20" id={page.slug}>
 
-<div className=" my-20 h-0 w-20 border border-bottom border-black"></div>
+        <div className=" my-20 h-0 w-20 border border-bottom border-black"></div>
            <h1 className=" text-gray-800 uppercase  text-5xl font-extrabold ">
             {page.title}
            </h1>
