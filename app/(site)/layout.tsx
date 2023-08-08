@@ -10,6 +10,7 @@ import Head from 'next/head'
 export const metadata: Metadata = {
   title: 'Mauro | Product Designer',
   description: 'NextJS + Sanity Webiste',
+  viewport: "width=device-width, initial-scale=1"
 }
 
 
@@ -28,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <Head>
-      <link rel="icon" href=".////favicon.png" />
+      <link rel="icon" href="/favicon.svg" />
       </Head>
      <body className="ml-10  flex p-10" >
     <Navbar/>
