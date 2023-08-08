@@ -16,12 +16,12 @@ function urlFor (source:any) {
         types: {
           image: ({value}:any) => {
             return (
-                <div className="relative w-full h-96 m-10 mx-auto">
+                <div className="relative w-full  m-10 p-2 mx-auto">
                     <Image
                         className=" object-contain" 
                         src={urlFor(value)}
                         width={1920}
-                        height={1080}
+                        height={100}
                         alt={value.alt || 'where '}
                         loading="lazy"          
                            />
