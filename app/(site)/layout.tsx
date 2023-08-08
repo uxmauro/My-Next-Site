@@ -4,7 +4,11 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import PageWrapper from '@/components/PageWrapper'
 import Head from 'next/head'
+import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
+ 
 
+  
 
 export const metadata: Metadata = {
   title: 'Mauro | Product Designer',
@@ -19,13 +23,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
+  
   //Get all of the pages
-/* 
+  /* 
   const pages = await getPages() */
-
+  
   return (
     <html lang="en">
+      <Analytics />
       <Head>
       <link rel="icon" href="/favicon.svg" />
       </Head>
