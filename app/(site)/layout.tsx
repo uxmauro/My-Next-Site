@@ -1,4 +1,4 @@
-import { getPages } from '@/sanity/sanity-utils'
+
 import '../globals.css'
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
@@ -6,13 +6,11 @@ import PageWrapper from '@/components/PageWrapper'
 import Head from 'next/head'
 
 
-
 export const metadata: Metadata = {
   title: 'Mauro | Product Designer',
   description: 'NextJS + Sanity Webiste',
   viewport: "width=device-width, initial-scale=1"
 }
-
 
 
 
@@ -31,11 +29,11 @@ export default async function RootLayout({
       <Head>
       <link rel="icon" href="/favicon.svg" />
       </Head>
-     <body className="ml-10  flex p-10" >
+     <body className= "xl:ml-10 flex xl:flex-row xl:p-10 " >
     <Navbar/>
   
       <PageWrapper>
-      <main className=" flex xl:w-4/5 py-2 pt-8 px-16 ml-60">
+      <main className=" flex xl:w-4/5 py-2 pt-8 xl:px-16 px-6 mt-20 xl:mt-2 xl:ml-60">
         {children}
       </main>
         

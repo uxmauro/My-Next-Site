@@ -55,7 +55,6 @@ body {
   pointer-events: none;
   -webkit-mask-image: linear-gradient(0deg, #fff 0%, rgba(217, 217, 217, 0.00) 40%);
   mix-blend-mode: multiply;
-
   z-index: -2;
 
 }
@@ -65,8 +64,8 @@ body {
   height: 100vh;
   width: 100vw;
   pointer-events: none;
-  opacity: 32%;
-   background: linear-gradient(90deg, #995c4ab8, #8e994d85, #397c94bc, #439382c4);
+  opacity: 40%;
+   background: linear-gradient(90deg, #a05139b8, #909f3a85, #4892adbc, #6cb3a3c4);
      animation: gradient 10s ease infinite; 
       background-size: 400% 400%;
       mix-blend-mode: multiply;

@@ -17,7 +17,7 @@ export default async function Home() {
     <h2 className=" mt-24 font-bold text-gray-700 text-3xl">My Work</h2> 
      */}
    
-<div className="mt-10 flex flex-row gap-8">
+<div className="mt-10 flex xl:flex-row flex-col gap-8">
     <div className=" flex flex-col gap-8">
 
     {
