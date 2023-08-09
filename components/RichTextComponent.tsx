@@ -18,7 +18,7 @@ function urlFor (source:any) {
             return (
                 <div className="relative w-full  m-10 p-2 mx-auto">
                     <Image
-                        className="object-contain rounded-md" 
+                        className="object-contain rounded-md shadow-md" 
                         src={urlFor(value)}
                         width={1920}
                         height={100}
