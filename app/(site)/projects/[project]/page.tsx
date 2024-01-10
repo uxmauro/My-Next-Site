@@ -11,7 +11,7 @@ import Link from "next/link";
 
 /* const SampleImageComponent = ({value}: any) => {
   return (
-    <Img 
+    <Img
       src= {urlBuilder().image(value).url()}
       alt={""}
       width={1920}
@@ -46,8 +46,8 @@ type Props = {
           <Link href={'/'} className="w-10 h-10 text-4xl flex items-center justify-center mx-4 hover:drop-shadow-md">
            <BiArrowBack/>
           </Link>
-         <h1 className=" text-gray-800 text-5xl font-extrabold ">                 
-         {project.name}        
+         <h1 className=" text-gray-800 text-5xl font-extrabold ">
+         {project.name}
          </h1>
          </header>
          <Image
@@ -57,11 +57,11 @@ type Props = {
             height={1080}
             className="mt-10 drop-shadow-lg object-cover rounded-xl"
             />
-         
+
 
          <div className=" text-lg text-gray-700 mt-5">
            <PortableText value={project.content} components={RichTextComponents}/>
          </div>
-        
+
          </div>
  }

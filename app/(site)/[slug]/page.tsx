@@ -13,13 +13,13 @@ export default async function Page({ params }: Props) {
 
 
     return (
-        <section className=" py-20" id={page.slug}>
+        <section className="py-20" id={page.slug}>
 
-        <div className=" my-20 h-0 w-20 border border-bottom border-black"></div>
            <h1 className=" text-gray-800 uppercase  text-5xl font-extrabold ">
             {page.title}
            </h1>
-           <div className=" text-lg text-gray-700 mt-5">
+        <div className=" my-10 h-0 w-20 border border-bottom border-black"></div>
+           <div className=" w-fit text-lg text-gray-700 mt-5">
            <PortableText value={page.content} components={RichTextComponents}/>
          </div>
         </section>

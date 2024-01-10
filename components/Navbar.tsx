@@ -14,20 +14,23 @@ return (
 
 <div className='hidden xl:block w-1/5 '></div>
 
-    <header className=' z-10 shadow-lg xl:shadow-none bg-white xl:bg-transparent py-12 items-center xl:items-start h-10 xl:w-80 w-full flex-row flex xl:flex-col fixed justify-around xl:h-screen gap-4 xl:py-20'>
-      <Link href={'/'} className='flex flex-row'>
+    <header className=' z-10 shadow-lg xl:shadow-none bg-white xl:bg-transparent py-12 items-center xl:items-start h-10 xl:w-80 w-full flex-row flex xl:flex-col fixed justify-around xl:h-screen gap-2 xl:py-20'>
+      <Link href={'/'} className='flex flex-row xl:flex-col'>
         <Image src={logo} alt="logo" className=' w-1/6 h-auto'/>
-        <p className=" font-extrabold uppercase xl:text-xl py-8 ml-4" > Mauro Guerrero</p>
+        <div className='py-8'>
+        <p className=" font-extrabold uppercase ml-4 xl:ml-0 xl:text-2xl" > Mauro Guerrero</p>
+        <p className=" font-bold uppercase xl:text-lg text-sm py-2 hidden xl:flex" > Product Designer</p>
+       </div>
         </Link>
 
-  <div className="hidden xl:flex flex-col gap-5 text-gray-600 font-bold text-1xl mb-10">
+  <div className="hidden xl:flex flex-col gap-4 text-gray-600 font-bold text-1xl mb-10">
 
   <Link href={'/'} className="uppercase relative group active:text-gray-950" >
       Portfolio
       <span className='h-[2px] inline-block w-0 bg-black absolute left-0 -bottom-0.5 group-hover:w-4/12 transition-[width] ease duration-500' >&nbsp;</span>
       </Link>
     {pages.map((page)=>(
-        <Link key={page._id} href={`/#${page.slug}`} className="uppercase relative group">
+        <Link key={page._id} href={`/${page.slug}`} className="uppercase relative group">
         {page.title}
 
       <span className='h-[2px] inline-block w-0 bg-black absolute left-0 -bottom-0.5 group-hover:w-4/12 transition-[width] ease duration-500' >&nbsp;</span>
