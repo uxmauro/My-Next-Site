@@ -1,20 +1,53 @@
+"use client"
+
 import { getPages } from '@/sanity/sanity-utils'
 import Image from 'next/image'
 import Link from 'next/link';
 import logo from '@/public/logo.svg'
 import Socials from './social-media';
+import React, { useState, useEffect } from 'react';
 
 
-export default async function Navbar(){
+// eslint-disable-next-line @next/next/no-async-client-component
+export default function Navbar() {
+  const [showDiv, setShowDiv] = useState(false);
 
-const pages = await getPages()
 
+  const sendMail = () => {
+    const mailtoUrl = 'mailto:hello@uxmauro.com';
+    window.location.href = mailtoUrl;
+  };
+
+  const toggleVisibility = () => {
+    setShowDiv(!showDiv);
+  };
+
+/*   useEffect(() => {
+    if(showDiv){
+    const timeout = setTimeout(() => {
+      setShowDiv(false);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  };
+  }, [showDiv]);
+ */
 return (
   <>
 
+
+    {/* contact modal */}
+    <div>
+      {showDiv && <div style={{ background: 'rgba(37, 37, 37, 0.70)'}}className='flex items-center justify-center top-0 left-0 fixed w-screen h-screen z-0 '>
+        <div onClick={toggleVisibility} className=' w-20 h-20 bg-white rounded-full'>X</div>
+        </div>}
+    </div>
+
+
+
 <div className='hidden xl:block w-1/5 '></div>
 
-    <header className=' z-10 shadow-lg xl:shadow-none bg-white xl:bg-transparent py-12 items-center xl:items-start h-10 xl:w-80 w-full flex-row flex xl:flex-col fixed justify-around xl:h-screen gap-2 xl:py-20'>
+
+<header className=' z-10 shadow-lg xl:shadow-none bg-white xl:bg-transparent py-12 items-center xl:items-start h-10 xl:w-80 w-full flex-row flex xl:flex-col fixed justify-around xl:h-screen gap-2 xl:py-20'>
       <Link href={'/'} className='flex flex-row xl:flex-col'>
         <Image src={logo} alt="logo" className=' w-1/6 h-auto'/>
         <div className='py-8'>
@@ -41,10 +74,10 @@ return (
       About
       <span className='h-[2px] inline-block w-0 bg-black absolute left-0 -bottom-0.5 group-hover:w-4/12 transition-[width] ease duration-500' >&nbsp;</span>
       </Link>
-<Link href={'/contact'} className="uppercase relative group active:text-gray-950" >
+<div onClick={sendMail} className=" cursor-pointer uppercase relative group active:text-gray-950" >
       Contact
       <span className='h-[2px] inline-block w-0 bg-black absolute left-0 -bottom-0.5 group-hover:w-4/12 transition-[width] ease duration-500' >&nbsp;</span>
-      </Link>
+      </div>
     <Link href={'https://uxmauro.github.io'} target='_blank' className="uppercase relative group active:text-gray-950" ><div className='flex gap-2'>
     Side Projects
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
