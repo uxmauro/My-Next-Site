@@ -5,12 +5,15 @@ import Image from 'next/image'
 import Link from 'next/link';
 import logo from '@/public/logo.svg'
 import Socials from './social-media';
+import { BiBriefcase, BiFile, BiPaperPlane, BiTestTube } from "react-icons/bi";
 import React, { useState, useEffect } from 'react';
+import {usePathname} from 'next/navigation';
 
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default function Navbar() {
   const [showDiv, setShowDiv] = useState(false);
+  const currentPage = usePathname()
 
 
   const sendMail = () => {
@@ -31,6 +34,7 @@ export default function Navbar() {
   };
   }, [showDiv]);
  */
+
 return (
   <>
 
@@ -47,7 +51,7 @@ return (
 <div className='hidden xl:block w-1/5 '></div>
 
 
-<header className=' z-10 shadow-lg xl:shadow-none bg-white xl:bg-transparent py-12 items-center xl:items-start h-10 xl:w-80 w-full flex-row flex xl:flex-col fixed justify-around xl:h-screen gap-2 xl:py-20'>
+<header className=' z-10 shadow-lg xl:shadow-none bg-white xl:bg-transparent py-12 items-center xl:items-start h-10 xl:w-80 w-full flex-row flex xl:flex-col xl:fixed absolute justify-around xl:h-screen gap-2 xl:py-20'>
       <Link href={'/'} className='flex flex-row xl:flex-col'>
         <Image src={logo} alt="logo" className=' w-1/6 h-auto'/>
         <div className='py-8'>
@@ -55,6 +59,40 @@ return (
         <p className=" font-bold uppercase xl:text-lg text-sm py-2 hidden xl:flex" > Product Designer</p>
        </div>
         </Link>
+ {/* Bottom Nav mobile */}
+<div className='xl:hidden flex justify-center fixed bottom-0 left-0 w-screen h-24 p-2 mb-4 ' >
+  <div className='flex  items-center justify-around shadow-md h-full w-11/12 rounded-xl test'>
+
+  <Link href={'/'} className={` text-white justify-center items-center flex flex-col gap-1  ${currentPage === '/' ? 'selected' : ''}`}>
+  <div className=" text-2xl">
+  <BiBriefcase/>
+  </div>
+  <p className=' text-sm'>Projects</p>
+  </Link>
+  <Link href={'/about'}  className={` text-white justify-center items-center flex flex-col gap-1 ${currentPage === '/about' ? 'selected' : ''}`}>
+  <div className=" text-2xl">
+  <BiFile/>
+  </div>
+  <p className=' text-sm'>About</p>
+  </Link>
+  <div onClick={sendMail} className ='text-white justify-center items-center flex flex-col gap-1'>
+  <div className=" text-2xl">
+  <BiPaperPlane/>
+  </div>
+  <p className=' text-sm'>Contact</p>
+  </div>
+  <Link href={'https://uxmauro.github.io'} target='_blank' className=' text-white justify-center items-center flex flex-col gap-1'>
+  <div className=" text-2xl">
+  <BiTestTube/>
+  </div>
+  <p className=' text-sm'>Side Projs</p>
+  </Link>
+
+ {/*End Bottom Nav mobile */}
+
+
+  </div>
+</div>
 
   <div className="hidden xl:flex flex-col gap-4 text-gray-600 font-bold text-1xl mb-10">
 

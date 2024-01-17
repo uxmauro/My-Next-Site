@@ -38,7 +38,7 @@ export default async function RootLayout({
     <Navbar/>
 
       <PageWrapper>
-      <main className="flex xl:w-4/5 py-2 pt-8 xl:px-16 px-6 mt-20 xl:mt-2 xl:ml-60">
+      <main className="flex xl:w-4/5 py-2 pt-8 w-screen justify-center xl:mb-4 mb-40 xl:px-16 px-6 mt-20 xl:mt-2 xl:ml-60">
         {children}
       </main>
 
