@@ -63,29 +63,29 @@ return (
 <div className='xl:hidden flex justify-center fixed bottom-0 left-0 w-screen h-24 p-2 mb-4 ' >
   <div className='flex  items-center justify-around shadow-md h-full w-11/12 rounded-xl test'>
 
-  <Link href={'/'} className={` text-white justify-center items-center flex flex-col gap-1  ${currentPage === '/' ? 'selected' : ''}`}>
+  <Link href={'/'} className={`w-20 h-16 text-white justify-center items-center flex flex-col gap-1  ${currentPage === '/' ? 'selected' : ''}`}>
   <div className=" text-2xl">
   <BiBriefcase/>
   </div>
   <p className=' text-sm'>Projects</p>
   </Link>
-  <Link href={'/about'}  className={` text-white justify-center items-center flex flex-col gap-1 ${currentPage === '/about' ? 'selected' : ''}`}>
+  <Link href={'/about'}  className={`w-20 h-16 text-white justify-center items-center flex flex-col gap-1 ${currentPage === '/about' ? 'selected' : ''}`}>
   <div className=" text-2xl">
   <BiFile/>
   </div>
   <p className=' text-sm'>About</p>
   </Link>
-  <div onClick={sendMail} className ='text-white justify-center items-center flex flex-col gap-1'>
+  <div onClick={sendMail} className ='w-20  text-white justify-center items-center flex flex-col gap-1'>
   <div className=" text-2xl">
   <BiPaperPlane/>
   </div>
   <p className=' text-sm'>Contact</p>
   </div>
-  <Link href={'https://uxmauro.github.io'} target='_blank' className=' text-white justify-center items-center flex flex-col gap-1'>
+  <Link href={'https://uxmauro.github.io'} target='_blank' className='w-20 text-white justify-center items-center flex flex-col gap-1'>
   <div className=" text-2xl">
   <BiTestTube/>
   </div>
-  <p className=' text-sm'>Side Projs</p>
+  <p className=' text-sm text-center'>Side Projs</p>
   </Link>
 
  {/*End Bottom Nav mobile */}
