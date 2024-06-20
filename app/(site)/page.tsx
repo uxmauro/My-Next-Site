@@ -1,3 +1,4 @@
+
 import { getPages, getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";

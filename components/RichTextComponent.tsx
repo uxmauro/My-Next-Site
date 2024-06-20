@@ -3,30 +3,39 @@ import Link from "next/link";
 import imageUrlBuilder from '@sanity/image-url'
 import client from "@/lib/sanity.client";
 
+interface ImageValueType {
+    // Properties related to the image source
+    src: string;
+    alt?: string; // Optional, as it might not always have alt text
 
+    // Add other properties specific to your 'value' object
+    // For example, if 'value' contains a 'caption' property:
+    caption?: string;
+
+    // Add more properties as needed
+  }
 
 function urlFor (source:any) {
     return imageUrlBuilder(client).image(source).url()
   }
-  
- 
 
 
  const RichTextComponents = {
         types: {
-          image: ({value}:any) => {
+          image: ({value}:{value:ImageValueType}) => {
             return (
                 <div className="relative w-full  m-10 p-2 mx-auto">
                     <Image
-                        className="object-contain rounded-md shadow-md" 
+                        className="object-contain rounded-md shadow-md"
                         src={urlFor(value)}
                         width={1920}
                         height={100}
-                        alt={value.alt || 'where '}
-                        loading="lazy"          
+                        alt={value.alt || 'project image'}
+                        loading="lazy"
                            />
+
                 </div>
-              
+
             );
           },
         },
@@ -84,7 +93,7 @@ function urlFor (source:any) {
         }
 
     }
- 
-        
+
+
 
     export default RichTextComponents

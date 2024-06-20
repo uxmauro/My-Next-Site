@@ -10,7 +10,8 @@ const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION;
  const client = createClient ({
     projectId: "5mneb0jv",
     dataset: "production",
-    apiVersion: '2023-07-03'
+    apiVersion: '2023-07-03',
+    useCdn: true
 })
 
 export default client

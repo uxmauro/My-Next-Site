@@ -10,11 +10,14 @@ import { Analytics } from '@vercel/analytics/react';
 
 
 
+
 export const metadata: Metadata = {
-  title: 'Mauro | Product Designer',
+  title: 'Mauro | Product Developer/Designer',
   description: 'NextJS + Sanity Webiste',
   viewport: "width=device-width, initial-scale=1"
 }
+
+
 
 
 
@@ -29,6 +32,8 @@ export default async function RootLayout({
   const pages = await getPages() */
 
   return (
+
+
     <html lang="en">
       <Analytics />
       <Head>
